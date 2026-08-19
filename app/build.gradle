@@ -1,0 +1,45 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "com.z68.birdtracker"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.z68.birdtracker"
+        minSdk 21
+        targetSdk 27
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_8
+        targetCompatibility JavaVersion.VERSION_8
+    }
+
+    packagingOptions {
+        pickFirst "META-INF/LICENSE"
+        pickFirst "META-INF/NOTICE"
+        pickFirst "META-INF/DEPENDENCIES"
+    }
+}
+
+dependencies {
+    // Legacy UVC stack explicitly known to support Android 5.x.
+    implementation "com.github.jiangdongguo:AndroidUSBCamera:2.3.4"
+
+    // USB-host serial drivers for CDC/ACM and common USB-UART chips.
+    implementation "com.github.mik3y:usb-serial-for-android:3.10.0"
+}

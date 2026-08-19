@@ -1,0 +1,17 @@
+Z68 BIRD TRACKER - QUICK START
+
+1. Extract this ZIP on your computer.
+2. Create a GitHub repository.
+3. Upload ALL extracted files/folders into the repository.
+4. Open the GitHub repository's Actions tab.
+5. Run "Build Z68 Bird Tracker APK".
+6. When it finishes, download the "Z68-Bird-Tracker-APK" artifact.
+7. Extract the artifact ZIP.
+8. Put app-debug.apk on your USB drive.
+9. Insert USB into the Z68.
+10. Open File Manager -> USB -> app-debug.apk -> Install.
+11. Launch Z68 Bird Tracker.
+
+DO NOT rename the source ZIP to .apk.
+DO NOT try to open .md files on the TV.
+The TV only needs the final app-debug.apk.

@@ -1,0 +1,3 @@
+Z68 Bird Tracker Android project v1.0.0
+minSdk 21 / targetSdk 27
+No FIRE command implemented.
