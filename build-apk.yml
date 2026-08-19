@@ -1,0 +1,35 @@
+name: Build Z68 Bird Tracker APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle 7.6.1
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "7.6.1"
+
+      - name: Build debug APK
+        run: gradle --no-daemon :app:assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Z68-Bird-Tracker-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error

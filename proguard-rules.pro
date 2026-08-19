@@ -1,0 +1,3 @@
+-keep class com.serenegiant.** { *; }
+-keep class com.jiangdg.** { *; }
+-keep class com.hoho.android.usbserial.** { *; }
